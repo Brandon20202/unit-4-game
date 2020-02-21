@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="jumbotron">
+		<div class="container">
+			<h1 class="text-center">Crystal Collector!</h1>
+			<p class="text-center">You will be given a random number you must reach at the start of the game located in the "Score to Reach" bin. <br>There are four crystals below. Each crystal adds a random value between 1-12 to your current score each time it is clicked.<br>You win the game by matching your current score to the score to reach. You lose the game if your score goes over the score to reach.<br>The value of each crystal is hidden until you click on it.<br>Each time when the game starts, the game will change the values of each crystal.</p>
+		</div>
+	</div>
+
+<div class="container">
+	
+	<div class="row">
+
+		<div class="col-md-3">
+		</div>
+		
+		<div class="col-md-3">
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Score to Reach</h3>
+					</div>
+					<div class="panel-body" id="goal-score">
+						
+					</div>
+				</div>
+
+		</div>
+
+		<div class="col-md-3">
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Your Current Score</h3>
+					</div>
+					<div class="panel-body" id="current-score">
+						
+					</div>
+				</div>
+
+		</div>
+
+		<div class="col-md-3">
+		</div>
+
+	</div> 
+
+	<div class="row">
+		<div class="col-md-3" >
+			<img src="assets/images/Gemone.jpeg" class="img-responsive image" alt="Gem1" id="crystalone">
+		</div>
+		<div class="col-md-3">
+			<img src="assets/images/Gemtwo.jpeg" class="img-responsive image" alt="Gem2" id="crystaltwo">
+		</div>
+		<div class="col-md-3">
+			<img src="assets/images/Gemthree.jpeg" class="img-responsive image" alt="Gem3" id="crystalthree">
+		</div>
+		<div class="col-md-3">
+			<img src="assets/images/Gemfour.jpeg" class="img-responsive image" alt="Gem4" id="crystalfour">			
+		</div>
+
+	</div>
+
+		<div class="row">
+
+		<div class="col-md-3">
+		</div>
+		
+		<div class="col-md-3">
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" >Wins</h3>
+					</div>
+					<div class="panel-body" id="wins">
+						
+					</div>
+				</div>
+
+		</div>
+
+		<div class="col-md-3">
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Losses</h3>
+					</div>
+					<div class="panel-body" id="losses">
+					
+					</div>
+				</div>
+
+		</div>
+
+		<div class="col-md-3">
+		</div>
+
+	</div>
+
+</div>
+
+<script src="assets/javascript/game.js" type="text/javascript"> </script>   
+</body>
+</html>
