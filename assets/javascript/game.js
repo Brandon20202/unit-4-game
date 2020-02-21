@@ -8,32 +8,32 @@ var crystalthree;
 var crystalfour;
 var score;
 //Returns a random integer between a given min and max
-function getRandomNum(min, max){
+function RandomNum(min, max){
     score= Math.floor(Math.random() * (max -min + 1)) + min;
     return score;
 };
 //Sets a random number between 19-120
-function getTargetNum(){
-    targetscore =getRandomNum(19, 120);
+function TargetNum(){
+    targetscore =RandomNum(19, 120);
     $('#goal-score').text(targetscore);
     return targetscore;
 };
 
 //sets a random number between 1-12 to each crystal
-function getCrystalnum(){
-    crystalone= getRandomNum(1, 12);
-    crystaltwo=getRandomNum(1, 12);
-    crystalthree=getRandomNum(1, 12);
-    crystalfour=getRandomNum(1, 12);
+function Crystalnum(){
+    crystalone= RandomNum(1, 12);
+    crystaltwo=RandomNum(1, 12);
+    crystalthree=RandomNum(1, 12);
+    crystalfour=RandomNum(1, 12);
 
 
 }
 //restarts the game
-function intializeGame(){
+function startGame(){
     playerScore=0;
-    getRandomNum();
-    getTargetNum();
-    getCrystalnum();
+    RandomNum();
+    TargetNum();
+    Crystalnum();
     updateGame();
 };
 //updatesGame
@@ -50,20 +50,18 @@ function checkWin(){
     if(targetscore === playerScore){
         wins++;
         alert("You win! Start Over");
-        intializeGame();
+        startGame();
         updateGame();
     }
 
     else if(targetscore < playerScore){
         losses++;
         alert("You Lose! Start Over");
-        intializeGame();
+        startGame();
         updateGame();
     }
 
-    else{
-        return false;
-    }
+    
 };
 
 //launches the game, when you click on a crystal it adds the value to the players score, updates the game and check to see if user won
