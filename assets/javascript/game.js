@@ -27,7 +27,7 @@ function Crystalnum(){
     crystalfour=RandomNum(1, 12);
 
 
-}
+};
 //restarts the game
 function startGame(){
     playerScore=0;
@@ -67,7 +67,7 @@ function checkWin(){
 //launches the game, when you click on a crystal it adds the value to the players score, updates the game and check to see if user won
 $(document).ready(function(){
     
-    intializeGame();
+    startGame();
    
     
     $('#crystalone').on("click", function(){
