@@ -15,6 +15,7 @@ function getRandomNum(min, max){
 //Sets a random number between 19-120
 function getTargetNum(){
     targetscore =getRandomNum(19, 120);
+    $('#goal-score').text(targetscore);
     return targetscore;
 };
 
@@ -37,13 +38,15 @@ function intializeGame(){
 };
 //updatesGame
 function updateGame(){
-    $('#goal-score').text(getRandomNum);
+    
     $('#current-score').text(playerScore);
     $('#wins').text(wins);
     $('#losses').text(losses);
+    
 }
 //check to see if he wins or lose or quits
 function checkWin(){
+   
     if(targetscore === playerScore){
         wins++;
         alert("You win! Start Over");
@@ -63,11 +66,12 @@ function checkWin(){
     }
 };
 
-//launches the game
+//launches the game, when you click on a crystal it adds the value to the players score, updates the game and check to see if user won
 $(document).ready(function(){
-
+    
     intializeGame();
-
+   
+    
     $('#crystalone').on("click", function(){
         playerScore +=crystalone;
         updateGame();
